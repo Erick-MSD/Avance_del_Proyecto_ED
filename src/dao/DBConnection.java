@@ -18,9 +18,9 @@ public class DBConnection {
             System.out.println("Error al obtener las tablas: " + e.getMessage());
         }
     }
-    private static final String URL = "jdbc:postgresql://db.eadbhqtppxqorwtbhkes.supabase.co:5432/postgres";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "ElErickesmiDios69";
+    private static final String URL = "jdbc:postgresql://aws-1-us-east-2.pooler.supabase.com:5432/postgres";
+    private static final String USER = "postgres.eadbhqtppxqorwtbhkes";
+    private static final String PASSWORD = "Gaynator69gratis";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
@@ -38,4 +38,8 @@ public class DBConnection {
                 System.out.println("Error de conexión: " + e.getMessage());
             }
         }
+        public Connection get() throws Exception {
+        // Asegúrate de tener el .jar del driver en lib/ y en el classpath
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
 }
