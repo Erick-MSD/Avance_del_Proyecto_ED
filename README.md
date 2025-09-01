@@ -25,9 +25,7 @@ Un sistema de gestión de triage para áreas de urgencias implementado en Java, 
 
 - **Java 17+** - Lenguaje principal
 - **JDBC** - Conectividad con base de datos
-- **PostgreSQL/MySQL** - Sistema de gestión de base de datos
-- **Maven/Gradle** - Gestión de dependencias
-- **JUnit 5** - Testing unitario
+- **PostgreSQL/Supabase** - Sistema de gestión de base de datos
 
 ## 📂 Estructura del Proyecto
 
@@ -58,42 +56,7 @@ src/
 
 ### Prerrequisitos
 - Java JDK 17 o superior
-- PostgreSQL 12+ o MySQL 8.0+
-- Maven 3.6+ o Gradle 7.0+
 
-### Pasos de Instalación
-
-1. **Clonar el repositorio**
-   ```bash
-   git clone https://github.com/tu-usuario/sistema-triage-urgencias.git
-   cd sistema-triage-urgencias
-   ```
-
-2. **Configurar la base de datos**
-   ```bash
-   # Crear base de datos
-   createdb triage_hospital
-   
-   # Ejecutar scripts de esquema
-   psql -d triage_hospital -f src/main/resources/schema.sql
-   ```
-
-3. **Configurar conexión**
-   ```properties
-   # src/main/resources/application.properties
-   db.url=jdbc:postgresql://localhost:5432/triage_hospital
-   db.username=tu_usuario
-   db.password=tu_contraseña
-   ```
-
-4. **Compilar y ejecutar**
-   ```bash
-   # Con Maven
-   mvn clean compile exec:java -Dexec.mainClass="Main"
-   
-   # Con Gradle
-   ./gradlew run
-   ```
 
 ## 📊 Diagramas UML
 
@@ -231,48 +194,13 @@ graph TB
 - **Integración con sistemas hospitalarios** existentes
 - **Auditoría completa** de todas las acciones del sistema
 
-## 🧪 Testing
-
-```bash
-# Ejecutar todos los tests
-mvn test
-
-# Ejecutar tests específicos
-mvn test -Dtest=TriageServiceTest
-
-# Generar reporte de cobertura
-mvn jacoco:report
-```
-
-## 📝 Contribuir al Proyecto
-
-1. Fork del repositorio
-2. Crear rama para nueva funcionalidad (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit de cambios (`git commit -m 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crear Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ## 👨‍💻 Equipo de Desarrollo
 
 - **[Tu Nombre]** - *Desarrollador Principal* - [@tu-usuario](https://github.com/tu-usuario)
 - **[Nombre del Compañero]** - *Desarrollador* - [@usuario-companero](https://github.com/usuario-companero)
 
-## 📞 Contacto
 
-Si tienes preguntas sobre el proyecto, no dudes en contactarnos:
-
-- **Email**: tu-email@universidad.edu
-- **GitHub Issues**: [Crear nuevo issue](https://github.com/tu-usuario/sistema-triage-urgencias/issues/new)
-
-## 🙏 Agradecimientos
-
-- Profesores de la materia de Estructuras de Datos
-- Personal médico que proporcionó insights sobre procesos de triage
-- Comunidad open source por las librerías utilizadas
 
 ---
 
