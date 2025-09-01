@@ -1,3 +1,9 @@
+<p align="center">
+  <img src="assets/img/Logo_tecmi.webp" alt="TecMilenio" width="150"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="assets/img/Hospital_santa_vida.png" alt="Hospital Santa Vida" width="150"/>
+</p>
+
 # 🏥 Sistema de Triage Hospitalario
 
 **Proyecto académico** para la materia de **Estructuras de Datos** - Sistema de gestión de triage para áreas de urgencias implementado en Java.
@@ -274,6 +280,41 @@ Los sistemas de urgencias hospitalarias enfrentan desafíos críticos:
 
 ---
 
+## 📌 Caso de Estudio: Hospital Privado Santa Vida
+
+El Hospital Privado **Santa Vida**, ubicado en Monterrey, enfrentaba un problema en su área de **Urgencias – Triage**:
+
+- Los pacientes se registraban en una lista general sin diferenciar nivel de urgencia  
+- Casos críticos esperaban más de lo debido  
+- En emergencias masivas (ej. accidentes viales) no había un mecanismo claro de distribución  
+- Faltaba rapidez para consultar expedientes cuando varios médicos atendían en paralelo  
+
+### ❌ Problemática
+Esto generaba retrasos, riesgo médico y desorganización en el área de urgencias.
+
+### 💡 Solución Propuesta
+Nuestro sistema digital de triage implementa estructuras de datos para optimizar el flujo de pacientes:
+
+- **Pilas (Stack)** → Niveles 1 y 2 (emergencias vitales y severas)  
+- **Colas (Queue)** → Niveles 3 y 4 (urgencias moderadas y menores)  
+- **Listas (List)** → Nivel 5 (no urgentes)  
+- **Tablas Hash** → Identificación rápida y gestión en situaciones de concurrencia  
+
+### 📊 Ejemplo de Flujo
+- Carlos (Nivel 1) → Pila de emergencias, atención inmediata  
+- María (Nivel 3) → Cola de urgencia moderada  
+- Luis (Nivel 5) → Lista de no urgentes  
+- Ana (Nivel 2) → Prioridad en la pila sobre casos moderados  
+
+### ✅ Beneficios
+- Atención justa y priorizada  
+- Orden en la sala de espera  
+- Rapidez en emergencias masivas  
+- Gestión hospitalaria clara y eficiente  
+
+---
+
+
 ## 👥 Roles del Sistema
 
 ### 🏥 Recepcionista
@@ -435,19 +476,21 @@ Secretaría de Salud de México. (2022). *Norma Oficial Mexicana NOM-027-SSA3-20
 
 ## 👨‍💻 Desarrolladores
 
-### Desarrollador Principal
-**Erick MSD**
+**Erick Mauricio Santiago Díaz**
 - GitHub: [@Erick-MSD](https://github.com/Erick-MSD)
-- Rol: Arquitecto del Sistema / Desarrollador Backend
-- Especialización: Estructuras de Datos y Algoritmos
+- Rol: Lider del Proyecto / Desarrollador Principal
 
-### [Segundo Integrante]
-**[Nombre Completo del Compañero]**
+**[Santiago Sebastian Rojo Marquez]**
+- GitHub: [Sanlann](https://github.com/Sanlaan)
 - Rol: Desarrollador / Especialista en Base de Datos
-- Especialización: Persistencia y Gestión de Datos Médicos
 
-*(Agregar más integrantes según corresponda con sus fotos circulares)*
+**[Daniel Isai Sanchez Guadarrama]**
+- GitHub: [DanielIsaiSG](https://github.com/DanielIsaiSG)
+- Rol: Arquitecto del Sistema / Desarrollador
 
+**[Josue David Murillo Gomez]**
+- GitHub: [Josuemgd15](https://github.com/Josuemgd15)
+- Rol: Encargado de la Documentación / Desarrollador
 ---
 
 ## 🔚 Conclusiones y Agradecimientos
