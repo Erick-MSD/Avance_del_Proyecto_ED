@@ -468,24 +468,53 @@ Secretaría de Salud de México. (2022). *Norma Oficial Mexicana NOM-027-SSA3-20
 
 ---
 
-## 👨‍💻 Desarrolladores
+## 👨‍💻 Desarrolladores  
 
-**Erick Mauricio Santiago Díaz**
-- GitHub: [@Erick-MSD](https://github.com/Erick-MSD)
-- Rol: Lider del Proyecto / Desarrollador Principal
+<table>
+  <tr>
+    <td width="160" align="center">
+      <img src="assets/img/Foto_Erick.jpg" alt="Foto Erick" width="120" height="120" style="border-radius:50%;">
+    </td>
+    <td>
+      <b>Erick Mauricio Santiago Díaz</b><br>
+      - GitHub: <a href="https://github.com/Erick-MSD">@Erick-MSD</a><br>
+      - Rol: Líder del Proyecto / Desarrollador Principal
+    </td>
+  </tr>
+  <tr>
+    <td width="160" align="center">
+      <img src="assets/img/Foto_Rojo.jpg" alt="Foto Rojo" width="120" height="120" style="border-radius:50%;">
+    </td>
+    <td>
+      <b>Santiago Sebastian Rojo Marquez</b><br>
+      - GitHub: <a href="https://github.com/Sanlaan">Sanlann</a><br>
+      - Rol: Desarrollador / Especialista en Base de Datos
+    </td>
+  </tr>
+  <tr>
+    <td width="160" align="center">
+      <img src="assets/img/Foto_Dani.jpg" alt="Foto Dani" width="120" height="120" style="border-radius:50%;">
+    </td>
+    <td>
+      <b>Daniel Isai Sanchez Guadarrama</b><br>
+      - GitHub: <a href="https://github.com/DanielIsaiSG">DanielIsaiSG</a><br>
+      - Rol: Arquitecto del Sistema / Desarrollador
+    </td>
+  </tr>
+  <tr>
+    <td width="160" align="center">
+      <img src="assets/img/Foto_Josue.jpg" alt="Foto Josue" width="120" height="120" style="border-radius:50%;">
+    </td>
+    <td>
+      <b>Josue David Murillo Gomez</b><br>
+      - GitHub: <a href="https://github.com/Josuemgd15">Josuemgd15</a><br>
+      - Rol: Encargado de la Documentación / Desarrollador
+    </td>
+  </tr>
+</table>
 
-**[Santiago Sebastian Rojo Marquez]**
-- GitHub: [Sanlann](https://github.com/Sanlaan)
-- Rol: Desarrollador / Especialista en Base de Datos
+<p align="center"> <img src="assets/img/Evidencia.jpg" alt="Foto Evidencia" width="300" height="300" style="border-radius:50%;"> </p>
 
-**[Daniel Isai Sanchez Guadarrama]**
-- GitHub: [DanielIsaiSG](https://github.com/DanielIsaiSG)
-- Rol: Arquitecto del Sistema / Desarrollador
-
-**[Josue David Murillo Gomez]**
-- GitHub: [Josuemgd15](https://github.com/Josuemgd15)
-- Rol: Encargado de la Documentación / Desarrollador
----
 
 ## 🔚 Conclusiones y Agradecimientos
 
