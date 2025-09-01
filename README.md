@@ -1,4 +1,4 @@
-# 🏥 Sistema de Triage Hospitalario
+o# 🏥 Sistema de Triage Hospitalario
 
 Un sistema de gestión de triage para áreas de urgencias implementado en Java, que permite la clasificación automática de pacientes según su nivel de urgencia médica y gestión eficiente de colas de atención.
 
@@ -46,10 +46,6 @@ src/
 │   ├── util/
 │   │   └── PriorityQueue.java          # Cola de prioridad personalizada
 │   └── Main.java                       # Punto de entrada
-├── test/java/                          # Tests unitarios
-└── resources/
-    ├── application.properties          # Configuración
-    └── schema.sql                      # Scripts de BD
 ```
 
 ## 🚀 Instalación y Configuración
