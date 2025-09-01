@@ -31,10 +31,11 @@
 5. [Diseño UML](#-diseño-uml)
 6. [Estructuras de Datos](#-estructuras-de-datos-aplicadas)
 7. [Análisis del Problema](#-análisis-del-problema)
-8. [Avance del Proyecto](#-avance-del-proyecto)
-9. [Glosario](#-glosario-de-términos)
-10. [Referencias](#-bibliografía-formato-apa)
-11. [Autores](#-desarrolladores)
+8. [Caso de Estudio: Hospital Privado Santa Vida](#-caso-de-estudio:-hospital-privado-santa-vida)
+9. [Avance del Proyecto](#-avance-del-proyecto)
+10. [Glosario](#-glosario-de-términos)
+11. [Referencias](#-bibliografía-formato-apa)
+12. [Autores](#-desarrolladores)
 
 ---
 
