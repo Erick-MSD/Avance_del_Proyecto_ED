@@ -20,10 +20,6 @@
 - **Profesora**: Blanca Aracely Aranda Machorro
 - **Ubicación**: Monterrey, Nuevo León
 
-### Archivo de Documentación Académica
-- **Nombre**: `TM_ESTRUCTURA_DE_DATOS_AVANCE_#EQUIPO_SISTEMA_TRIAGE_18AGOSTO2025.docx`
-- **Formato**: APA con estructura académica completa
-
 ---
 
 ## 📑 ÍNDICE DE CONTENIDO
