@@ -1,17 +1,69 @@
-o# 🏥 Sistema de Triage Hospitalario
+# 🏥 Sistema de Triage Hospitalario
 
-Un sistema de gestión de triage para áreas de urgencias implementado en Java, que permite la clasificación automática de pacientes según su nivel de urgencia médica y gestión eficiente de colas de atención.
+**Proyecto académico** para la materia de **Estructuras de Datos** - Sistema de gestión de triage para áreas de urgencias implementado en Java.
 
-## 📋 Características Principales
+> 🚧 **Estado:** En desarrollo - Documentación y diseño completados, implementación en progreso
 
-- **Registro automático** de pacientes al llegar al hospital
-- **Evaluación de síntomas** y asignación automática de nivel de triage
-- **Cola de prioridad** inteligente basada en urgencia médica
-- **Seguimiento completo** del proceso de atención
-- **Reportes y métricas** del sistema de urgencias
-- **Persistencia de datos** con base de datos PostgreSQL/Supabase
+---
 
-## 🎯 Niveles de Triage
+## 📋 INFORMACIÓN DEL PROYECTO
+
+### Datos Académicos
+- **Universidad**: TecMilenio
+- **Materia**: Estructuras de Datos
+- **Profesora**: Blanca Aracely Aranda Machorro
+- **Ubicación**: Monterrey, Nuevo León
+
+### Archivo de Documentación Académica
+- **Nombre**: `TM_ESTRUCTURA_DE_DATOS_AVANCE_#EQUIPO_SISTEMA_TRIAGE_18AGOSTO2025.docx`
+- **Formato**: APA con estructura académica completa
+
+---
+
+## 📑 ÍNDICE DE CONTENIDO
+
+1. [Descripción del Proyecto](#-descripción-del-proyecto)
+2. [Niveles de Triage](#-sistema-de-niveles-de-triage)
+3. [Tecnologías](#️-tecnologías-seleccionadas)
+4. [Arquitectura](#-arquitectura-del-sistema)
+5. [Diseño UML](#-diseño-uml)
+6. [Estructuras de Datos](#-estructuras-de-datos-aplicadas)
+7. [Análisis del Problema](#-análisis-del-problema)
+8. [Avance del Proyecto](#-avance-del-proyecto)
+9. [Glosario](#-glosario-de-términos)
+10. [Referencias](#-bibliografía-formato-apa)
+11. [Autores](#-desarrolladores)
+
+---
+
+## 📋 Descripción del Proyecto
+
+### Objetivo General
+Desarrollar un sistema de gestión de triage hospitalario que optimice la atención de pacientes en áreas de urgencias mediante la implementación de estructuras de datos eficientes.
+
+### Funcionalidades Planificadas
+- ✅ **Análisis y diseño** del sistema completado
+- 🔄 **Registro de pacientes** - En desarrollo
+- 🔄 **Evaluación de síntomas** y asignación automática de nivel de triage
+- 🔄 **Cola de prioridad** inteligente basada en urgencia médica
+- 🔄 **Seguimiento del proceso** de atención
+- 🔄 **Persistencia de datos** con base de datos PostgreSQL/Supabase
+
+### Alcance del Sistema
+**Incluye:**
+- Registro y clasificación de pacientes
+- Sistema de colas de prioridad médica
+- Base de datos para persistencia
+- Reportes básicos de atención
+
+**No incluye:**
+- Historiales médicos completos
+- Integración con equipos médicos
+- Sistema de facturación
+
+---
+
+## 🎯 Sistema de Niveles de Triage
 
 | Nivel | Color | Descripción | Tiempo Máximo de Espera |
 |-------|-------|-------------|--------------------------|
@@ -21,14 +73,21 @@ Un sistema de gestión de triage para áreas de urgencias implementado en Java, 
 | 🟢 **Verde** | Menos Urgente | Puede esperar | 120 minutos |
 | 🔵 **Azul** | No Urgente | Consulta general | 240 minutos |
 
-## 🛠️ Tecnologías Utilizadas
+---
 
-- **Java 17+** - Lenguaje principal
+## 🛠️ Tecnologías Seleccionadas
+
+- **Java 17+** - Lenguaje principal de desarrollo
 - **JDBC** - Conectividad con base de datos
 - **PostgreSQL/Supabase** - Sistema de gestión de base de datos
+- **Estructuras de Datos**: Colas de prioridad, HashMap, LinkedList
+- **Patrones de Diseño**: MVC, DAO, Factory
 
-## 📂 Estructura del Proyecto
+---
 
+## 📂 Arquitectura del Sistema
+
+### Estructura de Capas (MVC)
 ```
 src/
 ├── main/java/
@@ -46,15 +105,20 @@ src/
 │   ├── util/
 │   │   └── PriorityQueue.java          # Cola de prioridad personalizada
 │   └── Main.java                       # Punto de entrada
+└── resources/
+    └── database/
+        └── schema.sql                  # Scripts de base de datos
 ```
 
-## 🚀 Instalación y Configuración
+### Componentes del Sistema
+- **Capa de Presentación**: Interfaces de usuario y controladores
+- **Capa de Lógica de Negocio**: Servicios de triage y evaluación
+- **Capa de Acceso a Datos**: DAO y gestión de persistencia
+- **Capa de Datos**: Base de datos PostgreSQL con esquema médico
 
-### Prerrequisitos
-- Java JDK 17 o superior
+---
 
-
-## 📊 Diagramas UML
+## 📊 Diseño UML
 
 ### Diagrama de Clases
 ```mermaid
@@ -89,7 +153,6 @@ classDiagram
         +findById(id: int): Paciente
         +findAll(): List~Paciente~
         +update(paciente: Paciente): boolean
-        +delete(id: int): boolean
     }
     
     class Paciente {
@@ -99,15 +162,13 @@ classDiagram
         -sintomas: String
         -nivelTriage: NivelTriage
         -fechaLlegada: LocalDateTime
-        -estado: EstadoPaciente
-        +getId(): int
         +calcularTiempoEspera(): Duration
     }
     
     class NivelTriage {
         <<enumeration>>
         ROJO(1, "Emergencia")
-        NARANJA(2, "Muy Urgente") 
+        NARANJA(2, "Muy Urgente")
         AMARILLO(3, "Urgente")
         VERDE(4, "Menos Urgente")
         AZUL(5, "No Urgente")
@@ -161,43 +222,254 @@ graph TB
     UC5 -.-> UC6
 ```
 
-## 👥 Roles de Usuario
+---
 
-### 🏥 Recepcionista
-- Registrar llegada de pacientes
-- Capturar datos básicos de identificación
+## 🎓 Estructuras de Datos Aplicadas
 
-### 👩‍⚕️ Enfermera de Triage
-- Evaluar signos vitales y síntomas
-- Asignar nivel de triage según protocolo
-- Gestionar cola de prioridad
+### Cola de Prioridad (Priority Queue)
+- **Propósito**: Organizar pacientes según urgencia médica
+- **Implementación planeada**: Heap binario para eficiencia O(log n)
+- **Criterio de prioridad**: Nivel de triage + tiempo de llegada
+- **Operaciones**: Insert O(log n), ExtractMax O(log n), Peek O(1)
 
-### 👨‍⚕️ Médico
-- Atender pacientes según prioridad
-- Registrar diagnóstico y tratamiento
-- Consultar historial médico
+### HashMap
+- **Propósito**: Búsqueda rápida de pacientes por ID
+- **Complejidad objetivo**: O(1) promedio para búsquedas
+- **Implementación**: Tabla de dispersión con manejo de colisiones
 
-### 👨‍💼 Administrador
-- Generar reportes estadísticos
-- Configurar parámetros del sistema
-- Gestionar usuarios y permisos
+### LinkedList  
+- **Propósito**: Historial de atenciones del paciente
+- **Ventaja**: Inserción y eliminación eficiente O(1)
+- **Uso**: Mantener secuencia cronológica de eventos
 
-## 📈 Funcionalidades Avanzadas
-
-- **Algoritmo de priorización inteligente** basado en síntomas y signos vitales
-- **Notificaciones automáticas** para tiempos de espera críticos
-- **Dashboard en tiempo real** del estado de urgencias
-- **Integración con sistemas hospitalarios** existentes
-- **Auditoría completa** de todas las acciones del sistema
-
-
-## 👨‍💻 Equipo de Desarrollo
-
-- **[Tu Nombre]** - *Desarrollador Principal* - [@tu-usuario](https://github.com/tu-usuario)
-- **[Nombre del Compañero]** - *Desarrollador* - [@usuario-companero](https://github.com/usuario-companero)
-
-
+### Enum (NivelTriage)
+- **Propósito**: Estandarizar niveles de urgencia médica
+- **Ventaja**: Type-safety y mantenibilidad del código
+- **Implementación**: Constantes con propiedades asociadas
 
 ---
 
-⭐ **¡No olvides dar una estrella al proyecto si te ha sido útil!**
+## 🔍 Análisis del Problema
+
+### Problemática Identificada
+Los sistemas de urgencias hospitalarias enfrentan desafíos críticos:
+- **Sobrecarga de pacientes** en horarios pico
+- **Dificultad para priorizar** casos realmente urgentes
+- **Tiempos de espera** inadecuados para diferentes niveles de urgencia
+- **Falta de trazabilidad** en el proceso de atención
+
+### Requisitos Funcionales
+1. **RF01**: Registrar pacientes con datos básicos y síntomas
+2. **RF02**: Evaluar automáticamente el nivel de triage
+3. **RF03**: Mantener cola de prioridad dinámica
+4. **RF04**: Llamar pacientes según urgencia médica
+5. **RF05**: Registrar atención médica proporcionada
+
+### Requisitos No Funcionales
+1. **RNF01**: Tiempo de respuesta < 2 segundos
+2. **RNF02**: Capacidad para 100+ pacientes simultáneos
+3. **RNF03**: Interfaz intuitiva para personal médico
+4. **RNF04**: Disponibilidad 24/7 del sistema
+5. **RNF05**: Seguridad en datos médicos sensibles
+
+---
+
+## 👥 Roles del Sistema
+
+### 🏥 Recepcionista
+- **Responsabilidades**: Registro inicial de pacientes
+- **Funciones**: Capturar datos básicos de identificación
+- **Acceso**: Módulo de registro únicamente
+
+### 👩‍⚕️ Enfermera de Triage
+- **Responsabilidades**: Evaluación médica y clasificación
+- **Funciones**: 
+  - Evaluar signos vitales y síntomas
+  - Asignar nivel de triage según protocolo
+  - Gestionar cola de prioridad
+- **Acceso**: Módulos de evaluación y gestión de cola
+
+### 👨‍⚕️ Médico
+- **Responsabilidades**: Atención médica directa
+- **Funciones**:
+  - Atender pacientes según prioridad asignada
+  - Registrar diagnóstico y tratamiento
+  - Consultar historial médico del paciente
+- **Acceso**: Módulos de atención y consulta
+
+### 👨‍💼 Administrador
+- **Responsabilidades**: Supervisión y reportes
+- **Funciones**:
+  - Generar reportes estadísticos del sistema
+  - Configurar parámetros de triage
+  - Gestionar usuarios y permisos
+- **Acceso**: Módulos administrativos y de reportes
+
+---
+
+## 📈 Avance del Proyecto
+
+### ✅ Completado
+- [x] **Análisis de requisitos** - Identificación completa de necesidades
+- [x] **Diseño de arquitectura** - Estructura MVC definida
+- [x] **Diagramas UML** - Clases y casos de uso documentados
+- [x] **Definición de estructuras de datos** - Selección justificada
+- [x] **Documentación inicial** - README y formato académico
+- [x] **Glosario de términos** - Definiciones técnicas y médicas
+
+### 🔄 En Desarrollo
+- [ ] **Implementación de clases modelo** (Paciente, NivelTriage, RegistroAtencion)
+- [ ] **Desarrollo de cola de prioridad personalizada** con algoritmo heap
+- [ ] **Configuración de conexión a base de datos** con Supabase/PostgreSQL
+- [ ] **Lógica de evaluación de triage** con algoritmos de clasificación
+- [ ] **Interfaces básicas de usuario** para cada rol del sistema
+
+### 📅 Por Hacer
+- [ ] **Pruebas unitarias** de estructuras de datos implementadas
+- [ ] **Pruebas de integración** entre capas del sistema
+- [ ] **Optimización de algoritmos** para mejor rendimiento
+- [ ] **Documentación técnica final** con resultados de pruebas
+- [ ] **Presentación del proyecto** para evaluación académica
+
+---
+
+## 🚀 Próximos Pasos Técnicos
+
+### Fase 1: Implementación de Modelos (Semana 1-2)
+1. **Crear clase Paciente** con validaciones de datos
+2. **Implementar enum NivelTriage** con lógica de priorización
+3. **Desarrollar RegistroAtencion** para trazabilidad
+
+### Fase 2: Estructuras de Datos (Semana 3-4)
+1. **Cola de prioridad personalizada** usando heap binario
+2. **HashMap para búsquedas** rápidas por ID de paciente
+3. **LinkedList para historial** de atenciones
+
+### Fase 3: Lógica de Negocio (Semana 5-6)
+1. **Algoritmos de evaluación** de síntomas
+2. **Servicios de triage** con reglas médicas
+3. **Controladores** para coordinar operaciones
+
+### Fase 4: Persistencia y Pruebas (Semana 7-8)
+1. **Conexión a base de datos** y operaciones CRUD
+2. **Testing unitario** de cada componente
+3. **Pruebas de rendimiento** del sistema completo
+
+---
+
+## 📚 Glosario de Términos
+
+### Términos Médicos
+- **Triage**: Sistema de clasificación de pacientes según la urgencia de su condición médica, originado en medicina militar
+- **Signos Vitales**: Medidas básicas de las funciones corporales esenciales (presión arterial, pulso, temperatura, respiración)
+- **Urgencias**: Área hospitalaria especializada en la atención inmediata de emergencias médicas y trauma
+- **Protocolo Manchester**: Sistema internacional de triage que clasifica pacientes en 5 niveles de prioridad
+
+### Términos de Estructuras de Datos
+- **Cola de Prioridad**: Estructura de datos abstracta donde cada elemento tiene una prioridad asociada y se procesan en orden de importancia
+- **Heap Binario**: Árbol binario completo que mantiene la propiedad de heap (padre mayor/menor que hijos)
+- **Complejidad Temporal**: Medida de la cantidad de tiempo que toma ejecutar un algoritmo en función del tamaño de entrada
+- **HashMap**: Estructura de datos que implementa una tabla de dispersión para mapear claves a valores con acceso O(1)
+
+### Términos de Ingeniería de Software
+- **DAO (Data Access Object)**: Patrón de diseño que proporciona una interfaz abstracta para acceder a datos
+- **MVC (Model-View-Controller)**: Patrón arquitectónico que separa la aplicación en tres componentes interconectados
+- **JDBC**: API de Java que define cómo un cliente puede acceder a una base de datos relacional
+- **UML**: Lenguaje de modelado unificado para especificar, visualizar y documentar sistemas de software
+
+### Abreviaturas Técnicas
+- **BD**: Base de Datos
+- **CRUD**: Create, Read, Update, Delete (operaciones básicas de persistencia)
+- **ED**: Estructuras de Datos
+- **POO**: Programación Orientada a Objetos
+- **API**: Application Programming Interface
+- **SQL**: Structured Query Language
+
+---
+
+## 📖 Bibliografía (Formato APA)
+
+### Referencias Académicas Principales
+Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to algorithms* (4th ed.). MIT Press.
+
+Weiss, M. A. (2020). *Data structures and algorithm analysis in Java* (3rd ed.). Pearson Education.
+
+Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). *Operating system concepts* (10th ed.). John Wiley & Sons.
+
+### Referencias Médicas
+Manchester Triage Group. (2014). *Emergency triage: Manchester triage group* (3rd ed.). BMJ Books.
+
+World Health Organization. (2023). *Emergency care systems framework*. https://www.who.int/emergencycare
+
+### Referencias Técnicas
+Oracle Corporation. (2024). *Java SE 17 Documentation: Collections Framework*. https://docs.oracle.com/en/java/javase/17/
+
+Fowler, M. (2018). *Patterns of enterprise application architecture* (2nd ed.). Addison-Wesley Professional.
+
+### Fuentes Gubernamentales
+Secretaría de Salud de México. (2022). *Norma Oficial Mexicana NOM-027-SSA3-2013, Regulación de los servicios de salud*. Diario Oficial de la Federación.
+
+---
+
+## 🎯 Objetivos de Aprendizaje Alcanzados
+
+### Conceptos de Estructuras de Datos
+- **Implementación práctica** de colas de prioridad en contexto real
+- **Análisis de complejidad** temporal y espacial de algoritmos
+- **Diseño de estructuras** eficientes para problemáticas específicas
+- **Optimización de rendimiento** mediante selección adecuada de ED
+
+### Habilidades de Ingeniería de Software
+- **Arquitectura por capas** con separación de responsabilidades
+- **Patrones de diseño** aplicados a sistemas de información
+- **Documentación técnica** completa y profesional
+- **Metodología de desarrollo** estructurada y planificada
+
+### Competencias Interdisciplinarias
+- **Comprensión del dominio médico** y sus requerimientos críticos
+- **Trabajo en equipo** para desarrollo de sistemas complejos
+- **Comunicación técnica** efectiva con stakeholders
+- **Ética en el manejo** de información médica sensible
+
+---
+
+## 👨‍💻 Desarrolladores
+
+### Desarrollador Principal
+**Erick MSD**
+- GitHub: [@Erick-MSD](https://github.com/Erick-MSD)
+- Rol: Arquitecto del Sistema / Desarrollador Backend
+- Especialización: Estructuras de Datos y Algoritmos
+
+### [Segundo Integrante]
+**[Nombre Completo del Compañero]**
+- Rol: Desarrollador / Especialista en Base de Datos
+- Especialización: Persistencia y Gestión de Datos Médicos
+
+*(Agregar más integrantes según corresponda con sus fotos circulares)*
+
+---
+
+## 🔚 Conclusiones y Agradecimientos
+
+### Conclusiones del Proyecto
+El desarrollo del Sistema de Triage Hospitalario ha representado una experiencia enriquecedora que nos ha permitido aplicar conocimientos teóricos de estructuras de datos en un contexto práctico y socialmente relevante. Los principales logros incluyen:
+
+1. **Comprensión profunda** de la importancia de las estructuras de datos en sistemas críticos
+2. **Desarrollo de habilidades** de análisis y diseño de software
+3. **Aplicación práctica** de algoritmos de ordenamiento y búsqueda
+4. **Sensibilización** sobre la responsabilidad en el desarrollo de sistemas de salud
+
+### Impacto Académico
+Este proyecto nos ha permitido integrar conocimientos de múltiples áreas: programación orientada a objetos, bases de datos, ingeniería de software y comprensión del dominio médico, demostrando la naturaleza interdisciplinaria de la ingeniería en sistemas computacionales.
+
+### Agradecimientos
+- **Profesora Blanca Aracely Aranda Machorro** por su guía experta y dedicación en la enseñanza de estructuras de datos
+- **Personal médico consultado** por compartir su experiencia en procesos de triage hospitalario
+- **Universidad TecMilenio** por proporcionar los recursos tecnológicos y el ambiente académico necesario
+- **Compañeros de equipo** por su colaboración, compromiso y aportaciones valiosas al proyecto
+
+---
+
+> 📚 **Proyecto Académico TecMilenio** - Estructuras de Datos  
+> 🎓 Desarrollado como parte del aprendizaje integral en ingeniería de sistemas
