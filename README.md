@@ -107,9 +107,6 @@ src/
 │   ├── util/
 │   │   └── PriorityQueue.java          # Cola de prioridad personalizada
 │   └── Main.java                       # Punto de entrada
-└── resources/
-    └── database/
-        └── schema.sql                  # Scripts de base de datos
 ```
 
 ### Componentes del Sistema
