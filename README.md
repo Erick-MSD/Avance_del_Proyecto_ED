@@ -9,7 +9,7 @@ Un sistema de gestión de triage para áreas de urgencias implementado en Java, 
 - **Cola de prioridad** inteligente basada en urgencia médica
 - **Seguimiento completo** del proceso de atención
 - **Reportes y métricas** del sistema de urgencias
-- **Persistencia de datos** con base de datos PostgreSQL/MySQL
+- **Persistencia de datos** con base de datos PostgreSQL/Supabase
 
 ## 🎯 Niveles de Triage
 
