@@ -35,4 +35,11 @@ public class Task {
         return String.format("#R%d Pac:%d (%s) [%s] Dep:%s - %s @%s",
             idRegistro, pacienteId, pacienteNombre, nivel.getColor(), departamento, descripcion, creada);
     }
+
+    @Override public boolean equals(Object o){
+        if (this == o) return true;
+        if (!(o instanceof Task task)) return false;
+        return idRegistro == task.idRegistro;
+    }
+    @Override public int hashCode(){ return Integer.hashCode(idRegistro); }
 }

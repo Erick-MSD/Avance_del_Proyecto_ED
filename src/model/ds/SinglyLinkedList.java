@@ -24,4 +24,5 @@ public class SinglyLinkedList<T> {
         while(c!=null){ sb.append(c.v); c=c.next; if(c!=null) sb.append(", "); }
         return sb.append("]").toString();
     }
+    public void clear(){ head=null; size=0; }
 }

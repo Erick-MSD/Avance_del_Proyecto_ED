@@ -9,4 +9,6 @@ public class Queue<T> {
     public T front(){ if(head==null) throw new IllegalStateException("Cola vacía"); return head.v; }
     public boolean isEmpty(){ return head==null; }
     public int size(){ return size; }
+    public T tryDequeue(){ return head==null ? null : dequeue(); }
+    public void clear(){ while(head!=null){ head=head.next; } tail=null; size=0; }
 }

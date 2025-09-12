@@ -9,4 +9,6 @@ public class Stack<T> {
     public T peek(){ if(top==null) throw new IllegalStateException("Pila vacía"); return top.v; }
     public boolean isEmpty(){ return top==null; }
     public int size(){ return size; }
+    public T tryPop(){ return top==null ? null : pop(); }
+    public void clear(){ while(top!=null) top=top.next; size=0; }
 }
